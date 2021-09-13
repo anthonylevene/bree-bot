@@ -122,6 +122,11 @@ bot.on("message", async msg => {
                 case "guild-id":
                     msg.channel.send(msg.guild.id);
                     break;
+		case "say":
+		    if (["my name" "my name."].includes(args.join(" ").toLowerCase())) {
+		    msg.channel.send("**"+msg.author.username+".**");
+		    }
+		    break;
                 case "omnipotheon":
                     msg.channel.send("https://cdn.discordapp.com/attachments/886750041874763818/887089742590668831/image0.png");
                     break;
